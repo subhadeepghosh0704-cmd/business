@@ -91,6 +91,7 @@ ul { list-style: none; }
     cursor: pointer;
     border: none;
     transition: var(--transition);
+    text-align: center;
 }
 .btn-primary {
     background: linear-gradient(45deg, var(--neon-cyan), var(--neon-purple));
@@ -100,6 +101,7 @@ ul { list-style: none; }
 .btn-primary:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(0, 243, 255, 0.4);
+    color: #fff;
 }
 .btn-outline {
     background: transparent;
@@ -150,10 +152,31 @@ header.sticky {
     transition: left 0.4s ease;
     padding: 30px 20px;
     border-right: 1px solid var(--glass-border);
+    overflow-y: auto;
 }
 .sidebar.active { left: 0; }
-.sidebar-close { text-align: right; font-size: 1.5rem; cursor: pointer; margin-bottom: 30px; }
-.sidebar .nav-links { flex-direction: column; align-items: flex-start; gap: 20px; }
+.sidebar-close { text-align: right; font-size: 1.5rem; cursor: pointer; margin-bottom: 20px; color: #fff; }
+
+/* সাইডবারের ভেতরের মেনুর স্টাইল */
+.sidebar .nav-links { 
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 15px; 
+    width: 100%; 
+}
+.sidebar .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    font-size: 1.1rem;
+}
+.sidebar .nav-links .btn {
+    margin-top: 15px;
+    padding: 12px 0;
+    border-bottom: none;
+}
+
 .sidebar-overlay {
     position: fixed; inset: 0; background: rgba(0,0,0,0.7);
     z-index: 1000; display: none; backdrop-filter: blur(5px);
@@ -225,9 +248,16 @@ footer { background: #050505; padding: 60px 0 20px; border-top: 1px solid var(--
 .btn-top.show { opacity: 1; pointer-events: auto; }
 .btn-top:hover { background: var(--neon-purple); }
 
-/* Responsive Media Queries */
+/* =========================================
+   Responsive Media Queries (মোবাইলের জন্য ফিক্স করা হয়েছে)
+   ========================================= */
 @media (max-width: 768px) {
-    .nav-links { display: none; }
+    /* শুধুমাত্র হেডারের মেনু হাইড হবে, সাইডবারের মেনু নয় */
+    header .nav-links { display: none; }
+    
+    /* সাইডবারের মেনু যেন ঠিকমতো দেখায় তার জন্য */
+    .sidebar .nav-links { display: flex; }
+    
     .hamburger { display: block; }
     .hero h1 { font-size: 2.5rem; }
     .hero-buttons { flex-direction: column; }
