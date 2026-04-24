@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Buildwave Tech</title>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader"><div class="loader"></div></div>
+
+    <!-- Header / Navbar -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Buildwave <span class="text-gradient">Tech</span></a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html" style="color: var(--neon-cyan)">Contact</a>
+            </nav>
+            <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <!-- Mobile Sidebar (এটি না থাকার কারণেই স্ক্রিন কালো হয়ে ছিল) -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-close" id="sidebarClose"><i class="fas fa-times"></i></div>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html" style="color: var(--neon-cyan)">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="section-padding" style="margin-top: 80px;">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h1 style="font-size: 3.5rem">Get in <span class="text-gradient">Touch</span></h1>
+                <p>We'd love to hear from you. Drop us a message.</p>
+            </div>
+
+            <div class="grid-2 fade-in">
+                <!-- Contact Info -->
+                <div class="glass-card">
+                    <h3 style="margin-bottom: 20px;">Contact Information</h3>
+                    
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(0,243,255,0.1); display: flex; align-items: center; justify-content: center; margin-right: 15px; color: var(--neon-cyan);">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <p style="color: var(--text-muted)">Kirtipur, Badu Road, Madhyamgram, Kolkata - 700128</p>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                        <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(188,19,254,0.1); display: flex; align-items: center; justify-content: center; margin-right: 15px; color: var(--neon-purple);">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <p style="color: var(--text-muted)">+91 8777382175 <br> +91 7603094847</p>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; margin-bottom: 30px;">
+                        <div style="width: 40px; height: 40px; border-radius: 50%; background: rgba(0,243,255,0.1); display: flex; align-items: center; justify-content: center; margin-right: 15px; color: var(--neon-cyan);">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <p style="color: var(--text-muted)">contact@buildwavetech.in <br> digitalsubhadeep@gmail.com</p>
+                    </div>
+
+                    <!-- Map Embed -->
+                    <div class="map-placeholder">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14725.759495805562!2d88.4418641!3d22.6858296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89f0!2sMadhyamgram%2C%20Kolkata!5e0!3m2!1sen!2sin!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="glass-card">
+                    <h3 style="margin-bottom: 20px;">Send a Message</h3>
+                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="text" placeholder="Subject" required>
+                        <textarea rows="6" placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn btn-primary" style="width: 100%">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Buildwave Tech</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 15px;">A premier Website & Software Company founded by Subhadeep Ghosh.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="refund.html">Refund Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt" style="color: var(--neon-cyan); margin-right: 5px;"></i> Kirtipur, Badu Road, Kolkata - 700128</li>
+                        <li><i class="fas fa-phone" style="color: var(--neon-cyan); margin-right: 5px;"></i> +91 8777382175</li>
+                        <li><i class="fas fa-envelope" style="color: var(--neon-cyan); margin-right: 5px;"></i> contact@buildwavetech.in</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Buildwave Tech. All rights reserved. Designed by Subhadeep Ghosh.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Buttons -->
+    <a href="https://wa.me/918777382175" class="floating-btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <a href="tel:+918777382175" class="floating-btn btn-call"><i class="fas fa-phone"></i></a>
+    <a href="#" class="floating-btn btn-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
